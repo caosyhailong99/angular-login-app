@@ -71,10 +71,12 @@
             <input type="text" formControlName="email" name="email" placeholder="email">
             <label>e-mail</label>
           </div>
+          <span *ngIf="isNotValidEmail" class="error-text">Email is not valid</span>
           <div class="field-wrapper">
             <input type="password" formControlName="password" name="password" placeholder="password" autocomplete="new-password">
             <label>password</label>
           </div>
+          <span *ngIf="password?.errors?.['notValid']" class="error-text">Password is not valid</span>
           <div class="field-wrapper">
             <input type="password" formControlName="confirmPassword" name="password2" placeholder="password" autocomplete="new-password">
             <label>re-enter password</label>
